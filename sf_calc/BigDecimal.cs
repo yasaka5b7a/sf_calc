@@ -13,13 +13,13 @@ namespace System.Numerics
     public struct Bigdecimal : IConvertible, IComparable<Bigdecimal>, IEquatable<Bigdecimal>
     {
 
-        #region 定数
+        #region コンパイル時定数
 
         private const int precision = 100;  //  桁数
 
         #endregion
 
-        #region メンバ変数
+        #region 読み取り専用
 
         public static readonly Bigdecimal One = new Bigdecimal(BigInteger.One, 0);
         public static readonly Bigdecimal MinusOne = new Bigdecimal(BigInteger.MinusOne, 0);
@@ -513,6 +513,34 @@ namespace System.Numerics
             return ret;
         }
 
+        public static Bigdecimal Abs(Bigdecimal v) {
+            if(v > Bigdecimal.Zero)     return v;
+            return v*Bigdecimal.MinusOne;
+        }
+
+        public static Bigdecimal Pow(Bigdecimal v, int n) {
+            Bigdecimal w = One;
+            if (n == 0) return One;
+            if (n > 0)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    w *= v;
+                }
+                return w;
+            }
+            else
+            {
+                n = -n;
+                for (int i = 0; i < n; i++)
+                {
+                    w /= v;
+                }
+                return w;
+            }
+        }
+
+
 
         #endregion
 
@@ -788,6 +816,9 @@ namespace System.Numerics
         }
 
         #endregion
+
+
+        
 
     }
 

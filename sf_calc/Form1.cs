@@ -548,13 +548,14 @@ namespace sf_calc
                         line = myStream.ReadLine();
                         ll = line.Length;
                         if (ll == 0) break;
-                        if (line[0] != '#' && line[0] != 0x0d)
+                        if (line[0] != '#' && line[0] > 0x1f)
                         {
                             if (i > 55700)
                             {
                                 ll = 0;
                             }
                             TextArr1 = line.Split(SepString, StringSplitOptions.RemoveEmptyEntries);
+                            if (TextArr1.Length == 0) break;
                             aflag = 0;
                             if (String.Compare(TextArr1[0], "POWERSTEP", true) == 0)
                             {
@@ -594,35 +595,43 @@ namespace sf_calc
                             }
                             if (aflag == 0)
                             {
-                                string sx = TextArr1[0];
-                                string sy = TextArr1[1];
-
-                                if (double.TryParse(sx, out x) & double.TryParse(sy, out y))
-                                {
-                                    if (cflag == 2)
+                                
+                                try { 
+                                    string sx = TextArr1[0];
+                                    string sy = TextArr1[1];
+                                    if (double.TryParse(sx, out x) & double.TryParse(sy, out y))
                                     {
-                                        x1 = x; y1 = y;
-                                        cflag--;
-
-                                    }
-                                    else if (cflag == 1)
-                                    {
-                                        sensitivity = (y - y1) / (x - x1);
-                                        frm.sensitivity = sensitivity;
-                                        cflag--;
-
-                                    }
-                                    if (dflag == 1)
-                                    {
-                                        if (x2 < x)
+                                        if (cflag == 2)
                                         {
-                                            x2 = x; y2 = y;
-                                            frm.dataArrayTime[i] = x2;
-                                            frm.dataArrayVf[i] = y2;
-                                            i++;
+                                            x1 = x; y1 = y;
+                                            cflag--;
+
+                                        }
+                                        else if (cflag == 1)
+                                        {
+                                            sensitivity = (y - y1) / (x - x1);
+                                            frm.sensitivity = sensitivity;
+                                            cflag--;
+
+                                        }
+                                        if (dflag == 1)
+                                        {
+                                            if (x2 < x)
+                                            {
+                                                x2 = x; y2 = y;
+                                                frm.dataArrayTime[i] = x2;
+                                                frm.dataArrayVf[i] = y2;
+                                                i++;
+                                            }
                                         }
                                     }
                                 }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("SF_Calc Error: Could not convert data. \n Original error: " + ex.Message + "\n" + line);
+                                }
+
+                                
                             }
 
                         }
@@ -635,7 +644,7 @@ namespace sf_calc
             }
             catch (Exception ex)
             {
-                MessageBox.Show("SF_Calc Error: Could not read file from disk. Original error: " + ex.Message);
+                MessageBox.Show("SF_Calc Error: Could not read file from disk. \n Original error: " + ex.Message);
                 return;
             }
 

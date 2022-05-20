@@ -304,8 +304,8 @@
             this.tabPage1.Controls.Add(this.chartZth);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1042, 657);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1392, 825);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "過渡熱インピーダンス";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -527,8 +527,8 @@
             this.tabPage5.Controls.Add(this.label98);
             this.tabPage5.Controls.Add(this.label99);
             this.tabPage5.Controls.Add(this.chartdZ);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1042, 657);
             this.tabPage5.TabIndex = 4;
@@ -754,8 +754,8 @@
             this.tabPage2.Controls.Add(this.chartRthF);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1042, 657);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1392, 825);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "時定数スペクトル";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -974,8 +974,7 @@
             // tB_curCth
             // 
             this.tB_curCth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tB_curCth.Location = new System.Drawing.Point(919, 387);
-            this.tB_curCth.Margin = new System.Windows.Forms.Padding(2);
+            this.tB_curCth.Location = new System.Drawing.Point(1225, 484);
             this.tB_curCth.Name = "tB_curCth";
             this.tB_curCth.Size = new System.Drawing.Size(69, 19);
             this.tB_curCth.TabIndex = 94;
@@ -1157,8 +1156,8 @@
             0,
             0,
             131072});
-            this.numericUpDownCurY.Location = new System.Drawing.Point(988, 387);
-            this.numericUpDownCurY.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownCurY.Location = new System.Drawing.Point(1317, 484);
+            this.numericUpDownCurY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownCurY.Minimum = new decimal(new int[] {
             100,
             0,
@@ -1268,8 +1267,8 @@
             0,
             0,
             196608});
-            this.numericUpDownCurX.Location = new System.Drawing.Point(930, 182);
-            this.numericUpDownCurX.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownCurX.Location = new System.Drawing.Point(1240, 228);
+            this.numericUpDownCurX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownCurX.Name = "numericUpDownCurX";
             this.numericUpDownCurX.Size = new System.Drawing.Size(68, 19);
             this.numericUpDownCurX.TabIndex = 15;
@@ -1586,8 +1585,8 @@
             0,
             0,
             196608});
-            this.numericUpDownCurXd.Location = new System.Drawing.Point(904, 311);
-            this.numericUpDownCurXd.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownCurXd.Location = new System.Drawing.Point(1205, 389);
+            this.numericUpDownCurXd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownCurXd.Name = "numericUpDownCurXd";
             this.numericUpDownCurXd.Size = new System.Drawing.Size(68, 19);
             this.numericUpDownCurXd.TabIndex = 66;

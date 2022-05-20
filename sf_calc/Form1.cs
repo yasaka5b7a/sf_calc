@@ -548,13 +548,14 @@ namespace sf_calc
                         line = myStream.ReadLine();
                         ll = line.Length;
                         if (ll == 0) break;
-                        if (line[0] != '#' && line[0] != 0x0d)
+                        if (line[0] != '#' && line[0] > 0x1f)
                         {
                             if (i > 55700)
                             {
                                 ll = 0;
                             }
                             TextArr1 = line.Split(SepString, StringSplitOptions.RemoveEmptyEntries);
+                            if (TextArr1.Length == 0) break;
                             aflag = 0;
                             if (String.Compare(TextArr1[0], "POWERSTEP", true) == 0)
                             {
@@ -594,35 +595,43 @@ namespace sf_calc
                             }
                             if (aflag == 0)
                             {
-                                string sx = TextArr1[0];
-                                string sy = TextArr1[1];
-
-                                if (double.TryParse(sx, out x) & double.TryParse(sy, out y))
-                                {
-                                    if (cflag == 2)
+                                
+                                try { 
+                                    string sx = TextArr1[0];
+                                    string sy = TextArr1[1];
+                                    if (double.TryParse(sx, out x) & double.TryParse(sy, out y))
                                     {
-                                        x1 = x; y1 = y;
-                                        cflag--;
-
-                                    }
-                                    else if (cflag == 1)
-                                    {
-                                        sensitivity = (y - y1) / (x - x1);
-                                        frm.sensitivity = sensitivity;
-                                        cflag--;
-
-                                    }
-                                    if (dflag == 1)
-                                    {
-                                        if (x2 < x)
+                                        if (cflag == 2)
                                         {
-                                            x2 = x; y2 = y;
-                                            frm.dataArrayTime[i] = x2;
-                                            frm.dataArrayVf[i] = y2;
-                                            i++;
+                                            x1 = x; y1 = y;
+                                            cflag--;
+
+                                        }
+                                        else if (cflag == 1)
+                                        {
+                                            sensitivity = (y - y1) / (x - x1);
+                                            frm.sensitivity = sensitivity;
+                                            cflag--;
+
+                                        }
+                                        if (dflag == 1)
+                                        {
+                                            if (x2 < x)
+                                            {
+                                                x2 = x; y2 = y;
+                                                frm.dataArrayTime[i] = x2;
+                                                frm.dataArrayVf[i] = y2;
+                                                i++;
+                                            }
                                         }
                                     }
                                 }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("SF_Calc Error: Could not convert data. \n Original error: " + ex.Message + "\n" + line);
+                                }
+
+                                
                             }
 
                         }
@@ -635,7 +644,7 @@ namespace sf_calc
             }
             catch (Exception ex)
             {
-                MessageBox.Show("SF_Calc Error: Could not read file from disk. Original error: " + ex.Message);
+                MessageBox.Show("SF_Calc Error: Could not read file from disk. \n Original error: " + ex.Message);
                 return;
             }
 
@@ -650,7 +659,7 @@ namespace sf_calc
                 this.RefVf[i] = frm.RefVf[i];
             }
             dataRead[nowChannel] = frm.flag;
-            dz[nowChannel] = (Math.Log(frm.sTime[399]) - Math.Log(frm.sTime[0])) / 400D;
+            dz[nowChannel] = (Math.Log(frm.sTime[400]) - Math.Log(frm.sTime[0])) / 400D;
             for (int i = 0; i < 512; i++)
             {
                 stime[nowChannel, i] = frm.sTime[i];
@@ -684,30 +693,35 @@ namespace sf_calc
                     labelCh1.Visible = true;
                     tB_Ch1_Zth.Text = String.Format("{0:F4}", frm.Zthja[399]);
                     tB_Ch1_Area.Text = String.Format("{0:F3}", frm.ActiveArea);
+                    toolTip1.SetToolTip(this.labelCh1, String.Format("Tjmax={0:F3}", frm.Tjmax));
                     break;
                 case 1:
                     labelCh2.Text = "Ch2: " + openFileDialog1.SafeFileName;
                     labelCh2.Visible = true;
                     tB_Ch2_Zth.Text = String.Format("{0:F4}", frm.Zthja[399]);
                     tB_Ch2_Area.Text = String.Format("{0:F3}", frm.ActiveArea);
+                    toolTip1.SetToolTip(this.labelCh2, String.Format("Tjmax={0:F3}", frm.Tjmax));
                     break;
                 case 2:
                     labelCh3.Text = "Ch3: " + openFileDialog1.SafeFileName;
                     labelCh3.Visible = true;
                     tB_Ch3_Zth.Text = String.Format("{0:F4}", frm.Zthja[399]);
                     tB_Ch3_Area.Text = String.Format("{0:F3}", frm.ActiveArea);
+                    toolTip1.SetToolTip(this.labelCh3, String.Format("Tjmax={0:F3}", frm.Tjmax));
                     break;
                 case 3:
                     labelCh4.Text = "Ch4: " + openFileDialog1.SafeFileName;
                     labelCh4.Visible = true;
                     tB_Ch4_Zth.Text = String.Format("{0:F4}", frm.Zthja[399]);
                     tB_Ch4_Area.Text = String.Format("{0:F3}", frm.ActiveArea);
+                    toolTip1.SetToolTip(this.labelCh4, String.Format("Tjmax={0:F3}", frm.Tjmax));
                     break;
                 case 4:
                     labelCh5.Text = "Ch5: " + openFileDialog1.SafeFileName;
                     labelCh5.Visible = true;
                     tB_Ch5_Zth.Text = String.Format("{0:F4}", frm.Zthja[399]);
                     tB_Ch5_Area.Text = String.Format("{0:F3}", frm.ActiveArea);
+                    toolTip1.SetToolTip(this.labelCh5, String.Format("Tjmax={0:F3}", frm.Tjmax));
                     break;
                 default:
                     break;
@@ -1389,6 +1403,13 @@ namespace sf_calc
         {
             this.Text += "   バージョン ";
             this.Text += Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
+            toolTip1.SetToolTip(this.labelCh1, "Ch1");
+            toolTip1.SetToolTip(this.labelCh2, "Ch2");
+            toolTip1.SetToolTip(this.labelCh3, "Ch3");
+            toolTip1.SetToolTip(this.labelCh4, "Ch4");
+            toolTip1.SetToolTip(this.labelCh5, "Ch5");
+
         }
         #endregion
 

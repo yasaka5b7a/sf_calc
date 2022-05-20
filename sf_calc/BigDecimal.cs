@@ -15,7 +15,7 @@ namespace System.Numerics
 
         #region ƒRƒ“ƒpƒCƒ‹Žž’è”
 
-        private const int precision = 100;  //  Œ…”
+        private const int precision = 90;  //  Œ…”
 
         #endregion
 
@@ -513,14 +513,12 @@ namespace System.Numerics
             return ret;
         }
 
-        public static Bigdecimal Abs(Bigdecimal v)
-        {
-            if (v > Bigdecimal.Zero) return v;
-            return v * Bigdecimal.MinusOne;
+        public static Bigdecimal Abs(Bigdecimal v) {
+            if(v > Bigdecimal.Zero)     return v;
+            return v*Bigdecimal.MinusOne;
         }
 
-        public static Bigdecimal Pow(Bigdecimal v, int n)
-        {
+        public static Bigdecimal Pow(Bigdecimal v, int n) {
             Bigdecimal w = One;
             if (n == 0) return One;
             if (n > 0)
@@ -783,7 +781,7 @@ namespace System.Numerics
             }
             return unscaledValue.Sign;
 
-
+            
         }
 
         #endregion
@@ -820,7 +818,7 @@ namespace System.Numerics
         #endregion
 
 
-
+        
 
     }
 

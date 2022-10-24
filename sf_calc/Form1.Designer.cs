@@ -305,7 +305,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1392, 825);
+            this.tabPage1.Size = new System.Drawing.Size(1042, 657);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "過渡熱インピーダンス";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -527,7 +527,7 @@
             this.tabPage5.Controls.Add(this.label98);
             this.tabPage5.Controls.Add(this.label99);
             this.tabPage5.Controls.Add(this.chartdZ);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1042, 657);
@@ -755,7 +755,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1392, 825);
+            this.tabPage2.Size = new System.Drawing.Size(1042, 657);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "時定数スペクトル";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1877,6 +1877,7 @@
             this.labelCh1.Name = "labelCh1";
             this.labelCh1.Size = new System.Drawing.Size(200, 15);
             this.labelCh1.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.labelCh1, "ch1");
             // 
             // labelCh2
             // 
@@ -1886,6 +1887,7 @@
             this.labelCh2.Name = "labelCh2";
             this.labelCh2.Size = new System.Drawing.Size(200, 15);
             this.labelCh2.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.labelCh2, "ch2");
             // 
             // labelCh3
             // 
@@ -1895,6 +1897,7 @@
             this.labelCh3.Name = "labelCh3";
             this.labelCh3.Size = new System.Drawing.Size(200, 15);
             this.labelCh3.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.labelCh3, "ch3");
             // 
             // labelCh4
             // 
@@ -1904,6 +1907,7 @@
             this.labelCh4.Name = "labelCh4";
             this.labelCh4.Size = new System.Drawing.Size(200, 15);
             this.labelCh4.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.labelCh4, "ch4");
             // 
             // label42
             // 
@@ -2364,6 +2368,7 @@
             this.labelCh5.Name = "labelCh5";
             this.labelCh5.Size = new System.Drawing.Size(200, 15);
             this.labelCh5.TabIndex = 62;
+            this.toolTip1.SetToolTip(this.labelCh5, "ch5");
             // 
             // listBox1
             // 
@@ -2479,6 +2484,12 @@
             this.checkBox6.TabIndex = 71;
             this.checkBox6.Text = "Auto_calc";
             this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 15000;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.ReshowDelay = 100;
             // 
             // Form1
             // 

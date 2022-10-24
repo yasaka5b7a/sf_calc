@@ -40,7 +40,7 @@ namespace sf_calc
         public double[] TriggerTime = new double[5];   //TriggerTime
         public int[] averageCount = new int[5];   //平均化データ数
         public double[] area = new double[5];   //発熱面積
-        public double[] Phi0 = { 0.3D, 0.3D, 0.3D, 0.3D, 0.3D };
+        public double[] Phi0 = { 0.45D, 0.45D, 0.45D, 0.45D, 0.45D };
         public double[] Sigma = { 0.05D, 0.05D, 0.05D, 0.05D, 0.05D };
 
         // default Silicon
@@ -1302,8 +1302,8 @@ namespace sf_calc
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             chartZth.Series[1].Enabled = this.checkBox2.Checked;
-            chartZth.Series[6].Enabled = this.checkBox1.Checked;
-            chartdZ.Series[1].Enabled = this.checkBox1.Checked;
+            chartZth.Series[6].Enabled = this.checkBox2.Checked;
+            chartdZ.Series[1].Enabled = this.checkBox2.Checked;
             chartRthF.Series[1].Enabled = this.checkBox2.Checked;
             chartRnCn.Series[1].Enabled = this.checkBox2.Checked;
             chartdRdC.Series[1].Enabled = this.checkBox2.Checked;
@@ -1317,8 +1317,8 @@ namespace sf_calc
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             chartZth.Series[2].Enabled = this.checkBox3.Checked;
-            chartZth.Series[7].Enabled = this.checkBox1.Checked;
-            chartdZ.Series[2].Enabled = this.checkBox1.Checked;
+            chartZth.Series[7].Enabled = this.checkBox3.Checked;
+            chartdZ.Series[2].Enabled = this.checkBox3.Checked;
             chartRthF.Series[2].Enabled = this.checkBox3.Checked;
             chartRnCn.Series[2].Enabled = this.checkBox3.Checked;
             chartdRdC.Series[2].Enabled = this.checkBox3.Checked;
@@ -1332,8 +1332,8 @@ namespace sf_calc
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             chartZth.Series[3].Enabled = this.checkBox4.Checked;
-            chartZth.Series[8].Enabled = this.checkBox1.Checked;
-            chartdZ.Series[3].Enabled = this.checkBox1.Checked;
+            chartZth.Series[8].Enabled = this.checkBox4.Checked;
+            chartdZ.Series[3].Enabled = this.checkBox4.Checked;
             chartRthF.Series[3].Enabled = this.checkBox4.Checked;
             chartRnCn.Series[3].Enabled = this.checkBox4.Checked;
             chartdRdC.Series[3].Enabled = this.checkBox4.Checked;
@@ -1347,8 +1347,8 @@ namespace sf_calc
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
             chartZth.Series[4].Enabled = this.checkBox5.Checked;
-            chartZth.Series[9].Enabled = this.checkBox1.Checked;
-            chartdZ.Series[4].Enabled = this.checkBox1.Checked;
+            chartZth.Series[9].Enabled = this.checkBox5.Checked;
+            chartdZ.Series[4].Enabled = this.checkBox5.Checked;
             chartRthF.Series[4].Enabled = this.checkBox5.Checked;
             chartRnCn.Series[4].Enabled = this.checkBox5.Checked;
             chartdRdC.Series[4].Enabled = this.checkBox5.Checked;

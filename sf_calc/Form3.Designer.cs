@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartFFT = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.nudPhi0 = new System.Windows.Forms.NumericUpDown();
             this.nudSigma = new System.Windows.Forms.NumericUpDown();
@@ -49,30 +49,30 @@
             // 
             // chartFFT
             // 
-            chartArea2.AxisX.Crossing = -1D;
-            chartArea2.AxisX.Interval = 0.2D;
-            chartArea2.AxisX.Maximum = 1D;
-            chartArea2.AxisX.Minimum = -1D;
-            chartArea2.AxisY.Interval = 1D;
-            chartArea2.AxisY.Maximum = 2D;
-            chartArea2.AxisY.Minimum = -2D;
-            chartArea2.Name = "ChartArea1";
-            this.chartFFT.ChartAreas.Add(chartArea2);
-            legend2.DockedToChartArea = "ChartArea1";
-            legend2.Name = "Legend1";
-            this.chartFFT.Legends.Add(legend2);
+            chartArea1.AxisX.Crossing = -1D;
+            chartArea1.AxisX.Interval = 0.2D;
+            chartArea1.AxisX.Maximum = 1D;
+            chartArea1.AxisX.Minimum = -1D;
+            chartArea1.AxisY.Interval = 1D;
+            chartArea1.AxisY.Maximum = 2D;
+            chartArea1.AxisY.Minimum = -2D;
+            chartArea1.Name = "ChartArea1";
+            this.chartFFT.ChartAreas.Add(chartArea1);
+            legend1.DockedToChartArea = "ChartArea1";
+            legend1.Name = "Legend1";
+            this.chartFFT.Legends.Add(legend1);
             this.chartFFT.Location = new System.Drawing.Point(12, 15);
             this.chartFFT.Name = "chartFFT";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series3.Legend = "Legend1";
-            series3.Name = "M[Φ]";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series4.Legend = "Legend1";
-            series4.Name = "M[Φ]・F[Φ]";
-            this.chartFFT.Series.Add(series3);
-            this.chartFFT.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series1.Legend = "Legend1";
+            series1.Name = "M[Φ]";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series2.Legend = "Legend1";
+            series2.Name = "M[Φ]・F[Φ]";
+            this.chartFFT.Series.Add(series1);
+            this.chartFFT.Series.Add(series2);
             this.chartFFT.Size = new System.Drawing.Size(852, 443);
             this.chartFFT.TabIndex = 0;
             this.chartFFT.Text = "chart1";
@@ -95,10 +95,10 @@
             this.nudPhi0.Size = new System.Drawing.Size(69, 19);
             this.nudPhi0.TabIndex = 1;
             this.nudPhi0.Value = new decimal(new int[] {
-            3,
+            45,
             0,
             0,
-            65536});
+            131072});
             this.nudPhi0.ValueChanged += new System.EventHandler(this.nudPhi0_ValueChanged);
             // 
             // nudSigma

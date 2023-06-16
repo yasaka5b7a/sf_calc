@@ -974,7 +974,7 @@
             // tB_curCth
             // 
             this.tB_curCth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tB_curCth.Location = new System.Drawing.Point(1225, 484);
+            this.tB_curCth.Location = new System.Drawing.Point(911, 387);
             this.tB_curCth.Name = "tB_curCth";
             this.tB_curCth.Size = new System.Drawing.Size(69, 19);
             this.tB_curCth.TabIndex = 94;
@@ -1156,7 +1156,7 @@
             0,
             0,
             131072});
-            this.numericUpDownCurY.Location = new System.Drawing.Point(1317, 484);
+            this.numericUpDownCurY.Location = new System.Drawing.Point(929, 387);
             this.numericUpDownCurY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownCurY.Minimum = new decimal(new int[] {
             100,
@@ -1164,7 +1164,7 @@
             0,
             -2147483648});
             this.numericUpDownCurY.Name = "numericUpDownCurY";
-            this.numericUpDownCurY.Size = new System.Drawing.Size(14, 19);
+            this.numericUpDownCurY.Size = new System.Drawing.Size(68, 19);
             this.numericUpDownCurY.TabIndex = 76;
             this.numericUpDownCurY.Value = new decimal(new int[] {
             5,
@@ -1176,7 +1176,7 @@
             // label_mes
             // 
             this.label_mes.AutoSize = true;
-            this.label_mes.Location = new System.Drawing.Point(750, 632);
+            this.label_mes.Location = new System.Drawing.Point(784, 629);
             this.label_mes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_mes.Name = "label_mes";
             this.label_mes.Size = new System.Drawing.Size(25, 12);
@@ -1267,7 +1267,7 @@
             0,
             0,
             196608});
-            this.numericUpDownCurX.Location = new System.Drawing.Point(1240, 228);
+            this.numericUpDownCurX.Location = new System.Drawing.Point(930, 184);
             this.numericUpDownCurX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownCurX.Name = "numericUpDownCurX";
             this.numericUpDownCurX.Size = new System.Drawing.Size(68, 19);
@@ -1336,7 +1336,7 @@
             this.label45.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label45.Location = new System.Drawing.Point(21, 532);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(59, 16);
+            this.label45.Size = new System.Drawing.Size(58, 16);
             this.label45.TabIndex = 10;
             this.label45.Text = "0.00001";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1347,7 +1347,7 @@
             this.label31.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label31.Location = new System.Drawing.Point(32, 30);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(48, 16);
+            this.label31.Size = new System.Drawing.Size(47, 16);
             this.label31.TabIndex = 9;
             this.label31.Text = "10000";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1358,7 +1358,7 @@
             this.label30.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label30.Location = new System.Drawing.Point(40, 78);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(40, 16);
+            this.label30.Size = new System.Drawing.Size(39, 16);
             this.label30.TabIndex = 8;
             this.label30.Text = "1000";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1369,7 +1369,7 @@
             this.label29.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label29.Location = new System.Drawing.Point(48, 136);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(32, 16);
+            this.label29.Size = new System.Drawing.Size(31, 16);
             this.label29.TabIndex = 7;
             this.label29.Text = "100";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1380,7 +1380,7 @@
             this.label28.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label28.Location = new System.Drawing.Point(56, 188);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(24, 16);
+            this.label28.Size = new System.Drawing.Size(23, 16);
             this.label28.TabIndex = 6;
             this.label28.Text = "10";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1391,7 +1391,7 @@
             this.label27.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label27.Location = new System.Drawing.Point(29, 476);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(51, 16);
+            this.label27.Size = new System.Drawing.Size(50, 16);
             this.label27.TabIndex = 5;
             this.label27.Text = "0.0001";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1402,7 +1402,7 @@
             this.label26.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label26.Location = new System.Drawing.Point(37, 428);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(43, 16);
+            this.label26.Size = new System.Drawing.Size(42, 16);
             this.label26.TabIndex = 4;
             this.label26.Text = "0.001";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1413,7 +1413,7 @@
             this.label25.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label25.Location = new System.Drawing.Point(45, 359);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(35, 16);
+            this.label25.Size = new System.Drawing.Size(34, 16);
             this.label25.TabIndex = 3;
             this.label25.Text = "0.01";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1424,7 +1424,7 @@
             this.label24.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label24.Location = new System.Drawing.Point(53, 307);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(27, 16);
+            this.label24.Size = new System.Drawing.Size(26, 16);
             this.label24.TabIndex = 2;
             this.label24.Text = "0.1";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1435,7 +1435,7 @@
             this.label23.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label23.Location = new System.Drawing.Point(64, 246);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(16, 16);
+            this.label23.Size = new System.Drawing.Size(15, 16);
             this.label23.TabIndex = 1;
             this.label23.Text = "1";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1585,7 +1585,7 @@
             0,
             0,
             196608});
-            this.numericUpDownCurXd.Location = new System.Drawing.Point(1205, 389);
+            this.numericUpDownCurXd.Location = new System.Drawing.Point(904, 312);
             this.numericUpDownCurXd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownCurXd.Name = "numericUpDownCurXd";
             this.numericUpDownCurXd.Size = new System.Drawing.Size(68, 19);
@@ -1598,7 +1598,7 @@
             this.label46.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label46.Location = new System.Drawing.Point(16, 524);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(59, 16);
+            this.label46.Size = new System.Drawing.Size(58, 16);
             this.label46.TabIndex = 19;
             this.label46.Text = "0.00001";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1609,7 +1609,7 @@
             this.label32.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label32.Location = new System.Drawing.Point(27, 30);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(48, 16);
+            this.label32.Size = new System.Drawing.Size(47, 16);
             this.label32.TabIndex = 18;
             this.label32.Text = "10000";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1620,7 +1620,7 @@
             this.label33.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label33.Location = new System.Drawing.Point(35, 78);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(40, 16);
+            this.label33.Size = new System.Drawing.Size(39, 16);
             this.label33.TabIndex = 17;
             this.label33.Text = "1000";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1631,7 +1631,7 @@
             this.label34.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label34.Location = new System.Drawing.Point(43, 132);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(32, 16);
+            this.label34.Size = new System.Drawing.Size(31, 16);
             this.label34.TabIndex = 16;
             this.label34.Text = "100";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1642,7 +1642,7 @@
             this.label35.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label35.Location = new System.Drawing.Point(51, 188);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(24, 16);
+            this.label35.Size = new System.Drawing.Size(23, 16);
             this.label35.TabIndex = 15;
             this.label35.Text = "10";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1653,7 +1653,7 @@
             this.label36.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label36.Location = new System.Drawing.Point(24, 476);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(51, 16);
+            this.label36.Size = new System.Drawing.Size(50, 16);
             this.label36.TabIndex = 14;
             this.label36.Text = "0.0001";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1664,7 +1664,7 @@
             this.label37.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label37.Location = new System.Drawing.Point(32, 412);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(43, 16);
+            this.label37.Size = new System.Drawing.Size(42, 16);
             this.label37.TabIndex = 13;
             this.label37.Text = "0.001";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1675,7 +1675,7 @@
             this.label38.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label38.Location = new System.Drawing.Point(40, 359);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(35, 16);
+            this.label38.Size = new System.Drawing.Size(34, 16);
             this.label38.TabIndex = 12;
             this.label38.Text = "0.01";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1686,7 +1686,7 @@
             this.label39.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label39.Location = new System.Drawing.Point(48, 307);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(27, 16);
+            this.label39.Size = new System.Drawing.Size(26, 16);
             this.label39.TabIndex = 11;
             this.label39.Text = "0.1";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1697,7 +1697,7 @@
             this.label40.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label40.Location = new System.Drawing.Point(59, 246);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(16, 16);
+            this.label40.Size = new System.Drawing.Size(15, 16);
             this.label40.TabIndex = 10;
             this.label40.Text = "1";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1865,7 +1865,7 @@
             this.label41.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label41.Location = new System.Drawing.Point(16, 12);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(131, 16);
+            this.label41.Size = new System.Drawing.Size(130, 16);
             this.label41.TabIndex = 7;
             this.label41.Text = "選択中のチャンネル";
             // 
@@ -2139,7 +2139,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(1141, 62);
+            this.label56.Location = new System.Drawing.Point(1144, 62);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(35, 12);
             this.label56.TabIndex = 39;
@@ -2148,7 +2148,7 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(1141, 110);
+            this.label57.Location = new System.Drawing.Point(1144, 110);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(35, 12);
             this.label57.TabIndex = 40;
@@ -2157,7 +2157,7 @@
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(1141, 158);
+            this.label58.Location = new System.Drawing.Point(1144, 158);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(37, 12);
             this.label58.TabIndex = 41;
@@ -2166,7 +2166,7 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(1141, 206);
+            this.label59.Location = new System.Drawing.Point(1144, 206);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(35, 12);
             this.label59.TabIndex = 42;
@@ -2175,7 +2175,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(1141, 254);
+            this.label60.Location = new System.Drawing.Point(1144, 254);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(35, 12);
             this.label60.TabIndex = 43;
@@ -2184,7 +2184,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(1141, 302);
+            this.label61.Location = new System.Drawing.Point(1144, 302);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(37, 12);
             this.label61.TabIndex = 44;
@@ -2193,7 +2193,7 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(1142, 349);
+            this.label62.Location = new System.Drawing.Point(1144, 349);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(35, 12);
             this.label62.TabIndex = 45;
@@ -2202,7 +2202,7 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(1142, 397);
+            this.label63.Location = new System.Drawing.Point(1144, 397);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(35, 12);
             this.label63.TabIndex = 46;
@@ -2211,7 +2211,7 @@
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(1142, 445);
+            this.label64.Location = new System.Drawing.Point(1144, 445);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(37, 12);
             this.label64.TabIndex = 47;

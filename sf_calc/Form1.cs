@@ -669,6 +669,8 @@ namespace sf_calc
 
             }
 
+            /*   Zthの微分
+
             devZth[nowChannel, 399] = (Zth[nowChannel, 399] - Zth[nowChannel, 398]) / dz[nowChannel];
             devZth[nowChannel, 398] = (Zth[nowChannel, 398] - Zth[nowChannel, 397]) / dz[nowChannel];
             devZth[nowChannel, 0] = (Zth[nowChannel, 1] - Zth[nowChannel, 0]) / dz[nowChannel];
@@ -678,6 +680,15 @@ namespace sf_calc
                 devZth[nowChannel, i] = (-Zth[nowChannel, i + 2] + 8.0 * Zth[nowChannel, i + 1] - 8.0 * Zth[nowChannel, i - 1] + Zth[nowChannel, i - 2]) / 12.0 / dz[nowChannel];
             }
             for (int i = 400; i < 512; i++) devZth[nowChannel, i] = 0D;
+
+            */
+            
+            for (int i = 0; i < 512; i++)
+            {
+                devZth[nowChannel, i] = frm.dZthja[i];
+            }
+
+            
 
             area[nowChannel] = frm.ActiveArea;
             Tjmax[nowChannel] = frm.Tjmax;
@@ -1106,19 +1117,19 @@ namespace sf_calc
                     if (true)   //(i%10 == 0)
                     {
                         outf2.WriteLine("");
-                        outf2.WriteLine("SYMBOL cap {0} 48 R0", k * 144 + 16);
+                        outf2.WriteLine("SYMBOL cap {0} 48 R0", k * 208 + 80);
                         outf2.WriteLine("SYMATTR InstName C{0}", k + 1);
                         outf2.WriteLine("SYMATTR Value {0:E3}", c_LT);
                         outf2.WriteLine("");
-                        outf2.WriteLine("SYMBOL res {0} 16 R270", k * 144 + 48);
+                        outf2.WriteLine("SYMBOL res {0} 16 R270", k * 208 + 144);
                         outf2.WriteLine("SYMATTR InstName R{0}", k + 1);
                         outf2.WriteLine("SYMATTR Value {0:E3}", r_LT);
                         outf2.WriteLine("");
-                        outf2.WriteLine("WIRE {0} 0 {1} 0", k * 144, k * 144 + 64);
-                        outf2.WriteLine("WIRE {0} 0 {1} 48", k * 144 + 32, k * 144 + 32);
-                        outf2.WriteLine("WIRE {0} 112 {1} 160", k * 144 + 32, k * 144 + 32);
+                        outf2.WriteLine("WIRE {0} 0 {1} 0", k * 208 + 32, k * 208 + 160);
+                        outf2.WriteLine("WIRE {0} 0 {1} 48", k * 208 + 96, k * 208 + 96);
+                        outf2.WriteLine("WIRE {0} 112 {1} 160", k * 208 + 96, k * 208 + 96);
                         outf2.WriteLine("");
-                        outf2.WriteLine("FLAG {0} 160 0", k * 144 + 32);
+                        outf2.WriteLine("FLAG {0} 160 0", k * 208 + 96);
                         outf2.WriteLine("");
                         r_LT = 0D;
                         c_LT = 0D;

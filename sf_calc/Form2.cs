@@ -23,6 +23,7 @@ namespace sf_calc
 
         public double[] sTime = new double[512];
         public double[] Zthja = new double[512];
+        public double[] dZthja = new double[512];
         public int[] sCount = new int[512];
         public double powerstep;
         public double heatsinktemp;
@@ -297,9 +298,10 @@ namespace sf_calc
         private void button1_Click(object sender, EventArgs e)
         {
 
-            double step = Math.Pow(10.0, 18.0 / 512.0);     //1e-9から1e+9まで512分割
+            double step = Math.Pow(10.0, 12.0 / 512.0);     //1e-6から1e+6まで512分割
             double Vf;
-            for (int i = 0; i < 512; i++)
+
+            for(int i = 0; i < 512; i++)
             {
                 sTime[i] = Math.Pow(step, (double)(i - 256));
                 int j = triggernum;
@@ -313,18 +315,27 @@ namespace sf_calc
                     }
                 }
                 sCount[i] = j;
+            }
+
+
+            for (int i = 0; i < 512; i++)
+            {
+                
+
                 if (sTime[i] < cutofftime)
                 {
                     Vf = Vf0 + rTdt * Math.Sqrt(sTime[i]);
+                    dZthja[i] = -rTdt / 2.0 * Math.Sqrt(sTime[i]) / powerstep / sensitivity;
                 }
                 else
                 {
 
-                    if (j == maxTimeCount)
+                    if (sCount[i] == maxTimeCount)
                     {
                         double sum = 0.0;
                         for (int kk = 1; kk < 11; kk++) sum += dataArrayVf[maxTimeCount - kk];
-                        Vf = sum /= 10.0; ;
+                        Vf = sum /= 10.0;
+                        dZthja[i] = 0.0;
                     }
                     else
                     {
@@ -333,9 +344,17 @@ namespace sf_calc
                         double sumxx = 0.0;
                         double sumxy = 0.0;
                         double nn = 0.0;
-                        for (int kk = sCount[i] - avc; kk < sCount[i] + avc; kk++)
+                        int c1 = sCount[i] - avc;
+                        int c2 = sCount[i];
+                        int c3 = sCount[i] + avc;
+                        if (i > 1)
                         {
-                            double sx = Math.Log10(dataArrayTime[kk]);
+                            c1 = (sCount[i - 1] + c2) / 2;
+                            c3 = (sCount[i + 1] + c2) / 2;
+                        }
+                        for (int kk = c1; kk < c3; kk++)
+                        {
+                            double sx = Math.Log(dataArrayTime[kk]);
                             double sy = dataArrayVf[kk];
                             sumx += sx;
                             sumy += sy;
@@ -348,13 +367,15 @@ namespace sf_calc
                         if (!double.IsNaN(aa) && !double.IsNaN(bb))
                         {
 
-                            Vf = aa * Math.Log10(dataArrayTime[sCount[i]]) + bb;
+                            Vf = aa * Math.Log(dataArrayTime[c2]) + bb;
+                            dZthja[i] = -aa / powerstep / sensitivity;
                         }
                         else
                         {
                             double sum = 0.0;
                             for (int kk = 1; kk < 11; kk++) sum += dataArrayVf[maxTimeCount - kk];
-                            Vf = sum /= 10.0; ;
+                            Vf = sum /= 10.0;
+                            dZthja[i] = 0.0;
                         }
 
                     }

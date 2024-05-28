@@ -151,7 +151,7 @@ namespace sf_calc
                 default:
                     break;
             }
-            if (this.checkBox6.Checked) this.sfc();
+            this.sfc();
         }
 
         #endregion
@@ -520,7 +520,7 @@ namespace sf_calc
                 frm.dataArrayTime[i] = 0.0;
                 frm.dataArrayVf[i] = 0.0;
                 frm.RefTime[i] = this.RefTime[i];
-                frm.RefVf[i] = this.RefVf[i];
+                frm.RefTemp[i] = this.RefVf[i];
             }
 
             try
@@ -656,7 +656,7 @@ namespace sf_calc
             for (int i = 0; i < 60000; i++)
             {
                 this.RefTime[i] = frm.RefTime[i];
-                this.RefVf[i] = frm.RefVf[i];
+                this.RefVf[i] = frm.RefTemp[i];
             }
             dataRead[nowChannel] = frm.flag;
             dz[nowChannel] = (Math.Log(frm.sTime[400]) - Math.Log(frm.sTime[0])) / 400D;
@@ -900,29 +900,13 @@ namespace sf_calc
 
             }
 
-
-
-
-
-
-
-            btnCal.Visible = dataRead[nowChannel];
             btnReCal.Visible = dataRead[nowChannel];
             btnSave.Visible = dataCalc[nowChannel];
             return;
         }
         #endregion
 
-        #region btnCal_Click
-        /// <summary>
-        /// 構造関数の算出ボタンが押された
-        /// </summary>
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            this.sfc();
-        }
-        #endregion
+       
 
         #region btnSav_Click
         /// <summary>
@@ -944,7 +928,6 @@ namespace sf_calc
         {
 
             nowChannel = (int)numericUpDown1.Value - 1;
-            btnCal.Visible = dataRead[nowChannel];
             btnReCal.Visible = dataRead[nowChannel];
             btnSave.Visible = dataCalc[nowChannel];
             numericUpDown1.ForeColor = linecolor[nowChannel];

@@ -8,8 +8,7 @@ namespace sf_calc
         #region メンバ変数
 
         public double[] RefTime = new double[60000];
-        public double[] RefVf = new double[60000];
-        public int avc = 9;
+        public double[] RefTemp = new double[60000];
 
         /// <summary>
         /// Timeデータ
@@ -77,6 +76,7 @@ namespace sf_calc
             chartOffset.Series[0].Points.Clear();
             chartOffset.Series[1].Points.Clear();
             chartOffset.Series[2].Points.Clear();
+            chartOffset.Series[3].Points.Clear();
 
             triggertime = this.dataArrayTime[triggernum];
             cutofftime = this.dataArrayTime[cutoffnum + triggernum] - triggertime;
@@ -101,6 +101,20 @@ namespace sf_calc
                 // グラフにデータ追加
                 chartOffset.Series[0].Points.AddXY(tempTime, tempVf);
                 chartOffset.Series[1].Points.AddXY(tempTime, tempVf0);
+
+                if(checkBoxR.Checked)
+                {
+                    tempTime = RefTime[i];
+                    if (selectedrb == 2)
+                    {
+                        tempTime = Math.Log(tempTime);
+                    }
+                    if (selectedrb == 3)
+                    {
+                        tempTime = Math.Sqrt(tempTime);
+                    }
+                    chartOffset.Series[3].Points.AddXY(tempTime, RefTemp[i]);
+                }
 
             }
             Tjmax = (Vf0 - this.dataArrayVf[maxTimeCount - 1]) / this.sensitivity + this.heatsinktemp;
@@ -344,9 +358,9 @@ namespace sf_calc
                         double sumxx = 0.0;
                         double sumxy = 0.0;
                         double nn = 0.0;
-                        int c1 = sCount[i] - avc;
+                        int c1 = sCount[i] - 9;
                         int c2 = sCount[i];
-                        int c3 = sCount[i] + avc;
+                        int c3 = sCount[i] + 9;
                         if (i > 1)
                         {
                             c1 = (sCount[i - 1] + c2) / 2;
@@ -415,19 +429,7 @@ namespace sf_calc
 
             chartOffset.Series[3].Enabled = checkBoxR.Checked;
             chartOffset.Series[3].Points.Clear();
-            for (int i = 1; i < visibleTimeCount; i++)
-            {
-                double tempTime = RefTime[i];
-                if (selectedrb == 2)
-                {
-                    tempTime = Math.Log(tempTime);
-                }
-                if (selectedrb == 3)
-                {
-                    tempTime = Math.Sqrt(tempTime);
-                }
-                chartOffset.Series[3].Points.AddXY(tempTime, RefVf[i]);
-            }
+            
             ShowChartTj();
         }
         #endregion
@@ -439,8 +441,10 @@ namespace sf_calc
             triggertime = this.dataArrayTime[triggernum];
             cutofftime = this.dataArrayTime[cutoffnum + triggernum] - triggertime;
 
+            int maxCount = maxTimeCount - triggernum - 1;
+
             // 近似直線、温度データをチャートに追加
-            for (int i = 1; i < visibleTimeCount; i++)
+            for (int i = 0; i < maxCount; i++)
             {
                 // 小数点に変換
                 double tempTime = this.dataArrayTime[i + triggernum] - triggertime;
@@ -449,7 +453,7 @@ namespace sf_calc
                 // リファレンスにデータ追加
 
                 RefTime[i] = tempTime;
-                RefVf[i] = tempVf;
+                RefTemp[i] = tempVf;
 
             }
             checkBoxR.Enabled = true;
@@ -457,14 +461,6 @@ namespace sf_calc
         }
         #endregion
 
-        #region da/dz平均化データ数の変更
-        private void numericUpDown_daAv_ValueChanged(object sender, EventArgs e)
-        {
-            avc = (int)numericUpDown_daAv.Value;
-            if (avc > cutoffnum) avc = cutoffnum;
-            numericUpDown_daAv.Value = (decimal)avc;
-        }
-        #endregion
 
         #endregion
 

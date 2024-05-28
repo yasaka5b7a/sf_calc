@@ -186,7 +186,6 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.active_label = new System.Windows.Forms.Label();
-            this.btnCal = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label41 = new System.Windows.Forms.Label();
@@ -253,7 +252,6 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label75 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -282,7 +280,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(30, 76);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(2275, 1366);
@@ -304,7 +302,7 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.chartZth);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.tabPage1.Size = new System.Drawing.Size(2259, 1319);
@@ -450,7 +448,7 @@
             legend1.Name = "Legend1";
             this.chartZth.Legends.Add(legend1);
             this.chartZth.Location = new System.Drawing.Point(15, 16);
-            this.chartZth.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chartZth.Margin = new System.Windows.Forms.Padding(6);
             this.chartZth.Name = "chartZth";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastPoint;
@@ -688,7 +686,7 @@
             legend2.Name = "Legend1";
             this.chartdZ.Legends.Add(legend2);
             this.chartdZ.Location = new System.Drawing.Point(13, 28);
-            this.chartdZ.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chartdZ.Margin = new System.Windows.Forms.Padding(6);
             this.chartdZ.Name = "chartdZ";
             series11.ChartArea = "ChartArea1";
             series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastPoint;
@@ -781,7 +779,7 @@
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.chartRthF);
             this.tabPage2.Location = new System.Drawing.Point(8, 39);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.tabPage2.Size = new System.Drawing.Size(2259, 1319);
@@ -924,7 +922,7 @@
             legend3.Name = "Legend1";
             this.chartRthF.Legends.Add(legend3);
             this.chartRthF.Location = new System.Drawing.Point(6, 20);
-            this.chartRthF.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chartRthF.Margin = new System.Windows.Forms.Padding(6);
             this.chartRthF.Name = "chartRthF";
             series21.ChartArea = "ChartArea1";
             series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
@@ -1007,7 +1005,7 @@
             this.tabPage3.Controls.Add(this.label23);
             this.tabPage3.Controls.Add(this.chartRnCn);
             this.tabPage3.Location = new System.Drawing.Point(8, 39);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(2259, 1319);
             this.tabPage3.TabIndex = 2;
@@ -1018,7 +1016,7 @@
             // 
             this.tB_curCth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tB_curCth.Location = new System.Drawing.Point(1974, 774);
-            this.tB_curCth.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_curCth.Margin = new System.Windows.Forms.Padding(6);
             this.tB_curCth.Name = "tB_curCth";
             this.tB_curCth.Size = new System.Drawing.Size(145, 31);
             this.tB_curCth.TabIndex = 94;
@@ -1367,7 +1365,7 @@
             0,
             65536});
             this.numericUpDown_xmin.Location = new System.Drawing.Point(338, 1146);
-            this.numericUpDown_xmin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numericUpDown_xmin.Margin = new System.Windows.Forms.Padding(6);
             this.numericUpDown_xmin.Maximum = new decimal(new int[] {
             5,
             0,
@@ -1387,7 +1385,7 @@
             0,
             65536});
             this.numericUpDown_xmax.Location = new System.Drawing.Point(1788, 1158);
-            this.numericUpDown_xmax.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numericUpDown_xmax.Margin = new System.Windows.Forms.Padding(6);
             this.numericUpDown_xmax.Name = "numericUpDown_xmax";
             this.numericUpDown_xmax.Size = new System.Drawing.Size(108, 31);
             this.numericUpDown_xmax.TabIndex = 11;
@@ -1546,7 +1544,7 @@
             legend4.Name = "Legend1";
             this.chartRnCn.Legends.Add(legend4);
             this.chartRnCn.Location = new System.Drawing.Point(134, 28);
-            this.chartRnCn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chartRnCn.Margin = new System.Windows.Forms.Padding(6);
             this.chartRnCn.Name = "chartRnCn";
             series26.ChartArea = "ChartArea1";
             series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
@@ -1603,7 +1601,7 @@
             this.tabPage4.Controls.Add(this.label40);
             this.tabPage4.Controls.Add(this.chartdRdC);
             this.tabPage4.Location = new System.Drawing.Point(8, 39);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(2259, 1319);
             this.tabPage4.TabIndex = 3;
@@ -1822,7 +1820,7 @@
             legend5.Name = "Legend1";
             this.chartdRdC.Legends.Add(legend5);
             this.chartdRdC.Location = new System.Drawing.Point(134, 28);
-            this.chartdRdC.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chartdRdC.Margin = new System.Windows.Forms.Padding(6);
             this.chartdRdC.Name = "chartdRdC";
             series31.ChartArea = "ChartArea1";
             series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
@@ -1876,7 +1874,7 @@
             // btnOpen
             // 
             this.btnOpen.Location = new System.Drawing.Point(453, 12);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(6);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(223, 50);
             this.btnOpen.TabIndex = 1;
@@ -1887,7 +1885,7 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(1733, 76);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(6);
             this.progressBar1.Maximum = 400;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(520, 30);
@@ -1909,22 +1907,10 @@
             this.active_label.UseWaitCursor = true;
             this.active_label.Visible = false;
             // 
-            // btnCal
-            // 
-            this.btnCal.Location = new System.Drawing.Point(906, 12);
-            this.btnCal.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnCal.Name = "btnCal";
-            this.btnCal.Size = new System.Drawing.Size(247, 50);
-            this.btnCal.TabIndex = 4;
-            this.btnCal.Text = "構造関数の算出";
-            this.btnCal.UseVisualStyleBackColor = true;
-            this.btnCal.Visible = false;
-            this.btnCal.Click += new System.EventHandler(this.button2_Click);
-            // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(1168, 12);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(230, 50);
             this.btnSave.TabIndex = 5;
@@ -1939,7 +1925,7 @@
             this.numericUpDown1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown1.ForeColor = System.Drawing.Color.Blue;
             this.numericUpDown1.Location = new System.Drawing.Point(325, 16);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(6);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             5,
             0,
@@ -2031,7 +2017,7 @@
             this.tB_Ch1_Zth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tB_Ch1_Zth.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch1_Zth.Location = new System.Drawing.Point(2329, 116);
-            this.tB_Ch1_Zth.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch1_Zth.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch1_Zth.Name = "tB_Ch1_Zth";
             this.tB_Ch1_Zth.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch1_Zth.TabIndex = 15;
@@ -2041,7 +2027,7 @@
             this.tB_Ch1_Foster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tB_Ch1_Foster.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch1_Foster.Location = new System.Drawing.Point(2329, 212);
-            this.tB_Ch1_Foster.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch1_Foster.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch1_Foster.Name = "tB_Ch1_Foster";
             this.tB_Ch1_Foster.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch1_Foster.TabIndex = 17;
@@ -2061,7 +2047,7 @@
             this.tB_Ch1_Area.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tB_Ch1_Area.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch1_Area.Location = new System.Drawing.Point(2329, 308);
-            this.tB_Ch1_Area.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch1_Area.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch1_Area.Name = "tB_Ch1_Area";
             this.tB_Ch1_Area.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch1_Area.TabIndex = 19;
@@ -2079,7 +2065,7 @@
             // btnReCal
             // 
             this.btnReCal.Location = new System.Drawing.Point(696, 12);
-            this.btnReCal.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReCal.Margin = new System.Windows.Forms.Padding(6);
             this.btnReCal.Name = "btnReCal";
             this.btnReCal.Size = new System.Drawing.Size(195, 50);
             this.btnReCal.TabIndex = 20;
@@ -2093,7 +2079,7 @@
             this.tB_Ch2_Area.BackColor = System.Drawing.Color.LightYellow;
             this.tB_Ch2_Area.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch2_Area.Location = new System.Drawing.Point(2329, 596);
-            this.tB_Ch2_Area.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch2_Area.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch2_Area.Name = "tB_Ch2_Area";
             this.tB_Ch2_Area.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch2_Area.TabIndex = 26;
@@ -2113,7 +2099,7 @@
             this.tB_Ch2_Foster.BackColor = System.Drawing.Color.LightYellow;
             this.tB_Ch2_Foster.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch2_Foster.Location = new System.Drawing.Point(2329, 500);
-            this.tB_Ch2_Foster.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch2_Foster.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch2_Foster.Name = "tB_Ch2_Foster";
             this.tB_Ch2_Foster.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch2_Foster.TabIndex = 24;
@@ -2133,7 +2119,7 @@
             this.tB_Ch2_Zth.BackColor = System.Drawing.Color.LightYellow;
             this.tB_Ch2_Zth.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch2_Zth.Location = new System.Drawing.Point(2329, 404);
-            this.tB_Ch2_Zth.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch2_Zth.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch2_Zth.Name = "tB_Ch2_Zth";
             this.tB_Ch2_Zth.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch2_Zth.TabIndex = 22;
@@ -2153,7 +2139,7 @@
             this.tB_Ch3_Area.BackColor = System.Drawing.Color.MistyRose;
             this.tB_Ch3_Area.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch3_Area.Location = new System.Drawing.Point(2329, 884);
-            this.tB_Ch3_Area.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch3_Area.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch3_Area.Name = "tB_Ch3_Area";
             this.tB_Ch3_Area.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch3_Area.TabIndex = 32;
@@ -2173,7 +2159,7 @@
             this.tB_Ch3_Foster.BackColor = System.Drawing.Color.MistyRose;
             this.tB_Ch3_Foster.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch3_Foster.Location = new System.Drawing.Point(2329, 788);
-            this.tB_Ch3_Foster.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch3_Foster.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch3_Foster.Name = "tB_Ch3_Foster";
             this.tB_Ch3_Foster.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch3_Foster.TabIndex = 30;
@@ -2193,7 +2179,7 @@
             this.tB_Ch3_Zth.BackColor = System.Drawing.Color.MistyRose;
             this.tB_Ch3_Zth.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch3_Zth.Location = new System.Drawing.Point(2329, 692);
-            this.tB_Ch3_Zth.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch3_Zth.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch3_Zth.Name = "tB_Ch3_Zth";
             this.tB_Ch3_Zth.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch3_Zth.TabIndex = 28;
@@ -2213,7 +2199,7 @@
             this.tB_Ch4_Area.BackColor = System.Drawing.Color.LightGreen;
             this.tB_Ch4_Area.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch4_Area.Location = new System.Drawing.Point(2329, 1170);
-            this.tB_Ch4_Area.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch4_Area.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch4_Area.Name = "tB_Ch4_Area";
             this.tB_Ch4_Area.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch4_Area.TabIndex = 38;
@@ -2233,7 +2219,7 @@
             this.tB_Ch4_Foster.BackColor = System.Drawing.Color.LightGreen;
             this.tB_Ch4_Foster.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch4_Foster.Location = new System.Drawing.Point(2329, 1074);
-            this.tB_Ch4_Foster.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch4_Foster.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch4_Foster.Name = "tB_Ch4_Foster";
             this.tB_Ch4_Foster.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch4_Foster.TabIndex = 36;
@@ -2253,7 +2239,7 @@
             this.tB_Ch4_Zth.BackColor = System.Drawing.Color.LightGreen;
             this.tB_Ch4_Zth.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch4_Zth.Location = new System.Drawing.Point(2329, 978);
-            this.tB_Ch4_Zth.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch4_Zth.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch4_Zth.Name = "tB_Ch4_Zth";
             this.tB_Ch4_Zth.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch4_Zth.TabIndex = 34;
@@ -2405,7 +2391,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1985, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 50);
             this.button1.TabIndex = 51;
@@ -2416,7 +2402,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(2149, 12);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 50);
             this.button2.TabIndex = 52;
@@ -2459,7 +2445,7 @@
             this.tB_Ch5_Area.BackColor = System.Drawing.Color.Plum;
             this.tB_Ch5_Area.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch5_Area.Location = new System.Drawing.Point(2329, 1460);
-            this.tB_Ch5_Area.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch5_Area.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch5_Area.Name = "tB_Ch5_Area";
             this.tB_Ch5_Area.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch5_Area.TabIndex = 58;
@@ -2479,7 +2465,7 @@
             this.tB_Ch5_Foster.BackColor = System.Drawing.Color.Plum;
             this.tB_Ch5_Foster.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch5_Foster.Location = new System.Drawing.Point(2329, 1364);
-            this.tB_Ch5_Foster.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch5_Foster.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch5_Foster.Name = "tB_Ch5_Foster";
             this.tB_Ch5_Foster.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch5_Foster.TabIndex = 56;
@@ -2499,7 +2485,7 @@
             this.tB_Ch5_Zth.BackColor = System.Drawing.Color.Plum;
             this.tB_Ch5_Zth.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tB_Ch5_Zth.Location = new System.Drawing.Point(2329, 1268);
-            this.tB_Ch5_Zth.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tB_Ch5_Zth.Margin = new System.Windows.Forms.Padding(6);
             this.tB_Ch5_Zth.Name = "tB_Ch5_Zth";
             this.tB_Ch5_Zth.Size = new System.Drawing.Size(140, 39);
             this.tB_Ch5_Zth.TabIndex = 54;
@@ -2538,7 +2524,7 @@
             "Gallium Arsenide",
             "Gallium Nitride"});
             this.listBox1.Location = new System.Drawing.Point(1608, 16);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(6);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(325, 42);
             this.listBox1.TabIndex = 63;
@@ -2550,7 +2536,7 @@
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(54, 1450);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(155, 28);
             this.checkBox1.TabIndex = 64;
@@ -2564,7 +2550,7 @@
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Location = new System.Drawing.Point(509, 1450);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(155, 28);
             this.checkBox2.TabIndex = 65;
@@ -2578,7 +2564,7 @@
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(964, 1450);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(155, 28);
             this.checkBox3.TabIndex = 66;
@@ -2592,7 +2578,7 @@
             this.checkBox4.Checked = true;
             this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Location = new System.Drawing.Point(1419, 1450);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(155, 28);
             this.checkBox4.TabIndex = 67;
@@ -2606,7 +2592,7 @@
             this.checkBox5.Checked = true;
             this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox5.Location = new System.Drawing.Point(1866, 1450);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(155, 28);
             this.checkBox5.TabIndex = 68;
@@ -2629,26 +2615,13 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button3.ForeColor = System.Drawing.SystemColors.InfoText;
             this.button3.Location = new System.Drawing.Point(2344, 12);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(210, 44);
             this.button3.TabIndex = 70;
             this.button3.Text = "このソフトについて";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox6.Location = new System.Drawing.Point(1252, 72);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(136, 28);
-            this.checkBox6.TabIndex = 71;
-            this.checkBox6.Text = "Auto_calc";
-            this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // toolTip1
             // 
@@ -2662,7 +2635,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(2564, 1559);
-            this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label75);
             this.Controls.Add(this.checkBox5);
@@ -2727,13 +2699,12 @@
             this.Controls.Add(this.label41);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnCal);
             this.Controls.Add(this.active_label);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "SF_calc　過渡熱解析　～神奈川県立産業技術総合研究所～";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -2801,7 +2772,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label active_label;
-        private System.Windows.Forms.Button btnCal;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRnCn;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
@@ -2896,7 +2866,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.NumericUpDown numericUpDownCurX;
         private System.Windows.Forms.Label label_cth;
         private System.Windows.Forms.Label label79;

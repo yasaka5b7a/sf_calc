@@ -50,6 +50,8 @@ namespace sf_calc
 
         Properties.Settings Settings1 = new Properties.Settings();
 
+        public bool avshort=false;
+
         #endregion
 
         #region コンストラクタ
@@ -358,13 +360,14 @@ namespace sf_calc
                         double sumxx = 0.0;
                         double sumxy = 0.0;
                         double nn = 0.0;
-                        int c1 = sCount[i] - 9;
+
                         int c2 = sCount[i];
-                        int c3 = sCount[i] + 9;
-                        if (i > 1)
+                        int c1 = (sCount[i - 1] + c2) / 2;
+                        int c3 = (sCount[i + 1] + c2) / 2;
+                        if (avshort&(c2>30))
                         {
-                            c1 = (sCount[i - 1] + c2) / 2;
-                            c3 = (sCount[i + 1] + c2) / 2;
+                            c1 = c2 - 20;
+                            c3 = c2 + 20;
                         }
                         for (int kk = c1; kk < c3; kk++)
                         {
@@ -459,10 +462,14 @@ namespace sf_calc
             checkBoxR.Enabled = true;
             Rstat = true;
         }
-        #endregion
-
 
         #endregion
 
+        #endregion
+
+        private void checkBox_short_CheckedChanged(object sender, EventArgs e)
+        {
+            avshort = checkBox_short.Checked;
+        }
     }
 }

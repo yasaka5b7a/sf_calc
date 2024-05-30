@@ -61,7 +61,8 @@
             legend1.DockedToChartArea = "ChartArea1";
             legend1.Name = "Legend1";
             this.chartFFT.Legends.Add(legend1);
-            this.chartFFT.Location = new System.Drawing.Point(12, 15);
+            this.chartFFT.Location = new System.Drawing.Point(20, 22);
+            this.chartFFT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.chartFFT.Name = "chartFFT";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
@@ -73,7 +74,7 @@
             series2.Name = "M[Φ]・F[Φ]";
             this.chartFFT.Series.Add(series1);
             this.chartFFT.Series.Add(series2);
-            this.chartFFT.Size = new System.Drawing.Size(852, 443);
+            this.chartFFT.Size = new System.Drawing.Size(1420, 664);
             this.chartFFT.TabIndex = 0;
             this.chartFFT.Text = "chart1";
             // 
@@ -85,14 +86,15 @@
             0,
             0,
             196608});
-            this.nudPhi0.Location = new System.Drawing.Point(870, 201);
+            this.nudPhi0.Location = new System.Drawing.Point(1450, 302);
+            this.nudPhi0.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.nudPhi0.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudPhi0.Name = "nudPhi0";
-            this.nudPhi0.Size = new System.Drawing.Size(69, 19);
+            this.nudPhi0.Size = new System.Drawing.Size(115, 25);
             this.nudPhi0.TabIndex = 1;
             this.nudPhi0.Value = new decimal(new int[] {
             45,
@@ -109,14 +111,15 @@
             0,
             0,
             196608});
-            this.nudSigma.Location = new System.Drawing.Point(872, 260);
+            this.nudSigma.Location = new System.Drawing.Point(1453, 390);
+            this.nudSigma.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.nudSigma.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudSigma.Name = "nudSigma";
-            this.nudSigma.Size = new System.Drawing.Size(66, 19);
+            this.nudSigma.Size = new System.Drawing.Size(110, 25);
             this.nudSigma.TabIndex = 2;
             this.nudSigma.Value = new decimal(new int[] {
             5,
@@ -128,26 +131,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(871, 187);
+            this.label1.Location = new System.Drawing.Point(1452, 280);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 12);
+            this.label1.Size = new System.Drawing.Size(41, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Phi0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(873, 247);
+            this.label2.Location = new System.Drawing.Point(1455, 370);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 12);
+            this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Sigma";
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(875, 373);
+            this.btnOK.Location = new System.Drawing.Point(1458, 560);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(63, 23);
+            this.btnOK.Size = new System.Drawing.Size(105, 34);
             this.btnOK.TabIndex = 5;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -155,9 +161,10 @@
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(876, 401);
+            this.btnApply.Location = new System.Drawing.Point(1460, 602);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(61, 22);
+            this.btnApply.Size = new System.Drawing.Size(102, 33);
             this.btnApply.TabIndex = 6;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
@@ -165,9 +172,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(876, 428);
+            this.btnCancel.Location = new System.Drawing.Point(1460, 642);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(60, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 34);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -177,9 +185,10 @@
             // 
             this.button_up.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button_up.ForeColor = System.Drawing.Color.Red;
-            this.button_up.Location = new System.Drawing.Point(876, 47);
+            this.button_up.Location = new System.Drawing.Point(1460, 70);
+            this.button_up.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button_up.Name = "button_up";
-            this.button_up.Size = new System.Drawing.Size(58, 21);
+            this.button_up.Size = new System.Drawing.Size(97, 32);
             this.button_up.TabIndex = 8;
             this.button_up.Text = "レンジ＋";
             this.button_up.UseVisualStyleBackColor = true;
@@ -189,9 +198,10 @@
             // 
             this.button_down.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button_down.ForeColor = System.Drawing.Color.Blue;
-            this.button_down.Location = new System.Drawing.Point(876, 85);
+            this.button_down.Location = new System.Drawing.Point(1460, 128);
+            this.button_down.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button_down.Name = "button_down";
-            this.button_down.Size = new System.Drawing.Size(58, 21);
+            this.button_down.Size = new System.Drawing.Size(97, 32);
             this.button_down.TabIndex = 9;
             this.button_down.Text = "レンジ－";
             this.button_down.UseVisualStyleBackColor = true;
@@ -199,9 +209,10 @@
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 480);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1577, 720);
             this.Controls.Add(this.button_down);
             this.Controls.Add(this.button_up);
             this.Controls.Add(this.btnCancel);
@@ -212,6 +223,7 @@
             this.Controls.Add(this.nudSigma);
             this.Controls.Add(this.nudPhi0);
             this.Controls.Add(this.chartFFT);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form3";
             this.Text = "畳み込みの設定";
             this.Load += new System.EventHandler(this.Form3_Load);

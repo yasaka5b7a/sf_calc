@@ -64,7 +64,7 @@ namespace sf_calc
         private Color[] linecolor = new Color[5] { Color.Blue, Color.Gold, Color.Red, Color.Green, Color.Purple };
 
         public string[] DataFileName = new string[5];
-
+        public string[] ListName = new string[5];
 
 
         #endregion
@@ -669,7 +669,7 @@ namespace sf_calc
 
             }
 
-            /*   Zthの微分
+            //   Zthの微分（アルゴリズム1）
 
             devZth[nowChannel, 399] = (Zth[nowChannel, 399] - Zth[nowChannel, 398]) / dz[nowChannel];
             devZth[nowChannel, 398] = (Zth[nowChannel, 398] - Zth[nowChannel, 397]) / dz[nowChannel];
@@ -681,14 +681,16 @@ namespace sf_calc
             }
             for (int i = 400; i < 512; i++) devZth[nowChannel, i] = 0D;
 
-            */
-            
+            //
+
+            /*   Zthの微分（アルゴリズム2）
             for (int i = 0; i < 512; i++)
             {
                 devZth[nowChannel, i] = frm.dZthja[i];
             }
+            */
 
-            
+            ListName[nowChannel] = listBox1.SelectedItem.ToString();
 
             area[nowChannel] = frm.ActiveArea;
             Tjmax[nowChannel] = frm.Tjmax;
@@ -755,6 +757,7 @@ namespace sf_calc
                     myStream.WriteLine("Power step [W],{0}", Powerstep[nowChannel]);
                     myStream.WriteLine("Heatsink Temp [℃],{0}", HeatsinkTemp[nowChannel]);
                     myStream.WriteLine("発熱面積 [mm2],{0}", area[nowChannel]);
+                    myStream.WriteLine("チップの材質,{0}", ListName[nowChannel]);
                     myStream.WriteLine("参照熱抵抗 [K/W],{1},参照熱容量 [J/K],{0}", Math.Pow(10.0, (double)numericUpDownCurY.Value), Rthcx[nowChannel]);
                     myStream.WriteLine("Trigger time [μsec],{0}", TriggerTime[nowChannel] * 1.0e6);
                     myStream.WriteLine("Cut-Off time [μsec],{0}", CutOffTime[nowChannel] * 1.0e6);
@@ -1283,6 +1286,7 @@ namespace sf_calc
             chartZth.Series[0].Enabled = this.checkBox1.Checked;
             chartZth.Series[5].Enabled = this.checkBox1.Checked;
             chartdZ.Series[0].Enabled = this.checkBox1.Checked;
+            chartdZ.Series[5].Enabled = this.checkBox1.Checked;
             chartRthF.Series[0].Enabled = this.checkBox1.Checked;
             chartRnCn.Series[0].Enabled = this.checkBox1.Checked;
             chartdRdC.Series[0].Enabled = this.checkBox1.Checked;
@@ -1298,6 +1302,7 @@ namespace sf_calc
             chartZth.Series[1].Enabled = this.checkBox2.Checked;
             chartZth.Series[6].Enabled = this.checkBox2.Checked;
             chartdZ.Series[1].Enabled = this.checkBox2.Checked;
+            chartdZ.Series[6].Enabled = this.checkBox2.Checked;
             chartRthF.Series[1].Enabled = this.checkBox2.Checked;
             chartRnCn.Series[1].Enabled = this.checkBox2.Checked;
             chartdRdC.Series[1].Enabled = this.checkBox2.Checked;
@@ -1313,6 +1318,7 @@ namespace sf_calc
             chartZth.Series[2].Enabled = this.checkBox3.Checked;
             chartZth.Series[7].Enabled = this.checkBox3.Checked;
             chartdZ.Series[2].Enabled = this.checkBox3.Checked;
+            chartdZ.Series[7].Enabled = this.checkBox3.Checked;
             chartRthF.Series[2].Enabled = this.checkBox3.Checked;
             chartRnCn.Series[2].Enabled = this.checkBox3.Checked;
             chartdRdC.Series[2].Enabled = this.checkBox3.Checked;
@@ -1328,6 +1334,7 @@ namespace sf_calc
             chartZth.Series[3].Enabled = this.checkBox4.Checked;
             chartZth.Series[8].Enabled = this.checkBox4.Checked;
             chartdZ.Series[3].Enabled = this.checkBox4.Checked;
+            chartdZ.Series[8].Enabled = this.checkBox4.Checked;
             chartRthF.Series[3].Enabled = this.checkBox4.Checked;
             chartRnCn.Series[3].Enabled = this.checkBox4.Checked;
             chartdRdC.Series[3].Enabled = this.checkBox4.Checked;
@@ -1343,6 +1350,7 @@ namespace sf_calc
             chartZth.Series[4].Enabled = this.checkBox5.Checked;
             chartZth.Series[9].Enabled = this.checkBox5.Checked;
             chartdZ.Series[4].Enabled = this.checkBox5.Checked;
+            chartdZ.Series[9].Enabled = this.checkBox5.Checked;
             chartRthF.Series[4].Enabled = this.checkBox5.Checked;
             chartRnCn.Series[4].Enabled = this.checkBox5.Checked;
             chartdRdC.Series[4].Enabled = this.checkBox5.Checked;
@@ -1404,6 +1412,7 @@ namespace sf_calc
             toolTip1.SetToolTip(this.labelCh4, "Ch4");
             toolTip1.SetToolTip(this.labelCh5, "Ch5");
 
+            listBox1.SelectedIndex = 1;
         }
         #endregion
 

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartOffset = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -69,6 +69,8 @@
             this.checkBoxR = new System.Windows.Forms.CheckBox();
             this.buttonR = new System.Windows.Forms.Button();
             this.checkBox_short = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_LL = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chartOffset)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -77,52 +79,53 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_LL)).BeginInit();
             this.SuspendLayout();
             // 
             // chartOffset
             // 
-            chartArea2.AxisX.Title = "Time [sec]";
-            chartArea2.AxisY.Title = "Junction Temperature [℃]";
-            chartArea2.Name = "ChartArea1";
-            this.chartOffset.ChartAreas.Add(chartArea2);
+            chartArea8.AxisX.Title = "Time [sec]";
+            chartArea8.AxisY.Title = "Junction Temperature [℃]";
+            chartArea8.Name = "ChartArea1";
+            this.chartOffset.ChartAreas.Add(chartArea8);
             this.chartOffset.Enabled = false;
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chartOffset.Legends.Add(legend2);
-            this.chartOffset.Location = new System.Drawing.Point(43, 56);
+            legend8.Enabled = false;
+            legend8.Name = "Legend1";
+            this.chartOffset.Legends.Add(legend8);
+            this.chartOffset.Location = new System.Drawing.Point(34, 59);
             this.chartOffset.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.chartOffset.Name = "chartOffset";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series5.Color = System.Drawing.Color.Blue;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series6.Color = System.Drawing.Color.Red;
-            series6.Legend = "Legend1";
-            series6.Name = "Series2";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series7.Color = System.Drawing.Color.Red;
-            series7.Legend = "Legend1";
-            series7.MarkerSize = 25;
-            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Star4;
-            series7.Name = "Series3";
-            series7.YValuesPerPoint = 2;
-            series8.BorderColor = System.Drawing.Color.Transparent;
-            series8.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series8.BorderWidth = 2;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Color = System.Drawing.Color.Black;
-            series8.Legend = "Legend1";
-            series8.MarkerBorderColor = System.Drawing.Color.Transparent;
-            series8.Name = "Series4";
-            this.chartOffset.Series.Add(series5);
-            this.chartOffset.Series.Add(series6);
-            this.chartOffset.Series.Add(series7);
-            this.chartOffset.Series.Add(series8);
+            series29.ChartArea = "ChartArea1";
+            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series29.Color = System.Drawing.Color.Blue;
+            series29.Legend = "Legend1";
+            series29.Name = "Series1";
+            series30.ChartArea = "ChartArea1";
+            series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series30.Color = System.Drawing.Color.Red;
+            series30.Legend = "Legend1";
+            series30.Name = "Series2";
+            series31.ChartArea = "ChartArea1";
+            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series31.Color = System.Drawing.Color.Red;
+            series31.Legend = "Legend1";
+            series31.MarkerSize = 25;
+            series31.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Star4;
+            series31.Name = "Series3";
+            series31.YValuesPerPoint = 2;
+            series32.BorderColor = System.Drawing.Color.Transparent;
+            series32.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series32.BorderWidth = 2;
+            series32.ChartArea = "ChartArea1";
+            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series32.Color = System.Drawing.Color.Black;
+            series32.Legend = "Legend1";
+            series32.MarkerBorderColor = System.Drawing.Color.Transparent;
+            series32.Name = "Series4";
+            this.chartOffset.Series.Add(series29);
+            this.chartOffset.Series.Add(series30);
+            this.chartOffset.Series.Add(series31);
+            this.chartOffset.Series.Add(series32);
             this.chartOffset.Size = new System.Drawing.Size(1018, 688);
             this.chartOffset.TabIndex = 0;
             this.chartOffset.Text = "chartOffset";
@@ -564,12 +567,46 @@
             this.checkBox_short.UseVisualStyleBackColor = true;
             this.checkBox_short.CheckedChanged += new System.EventHandler(this.checkBox_short_CheckedChanged);
             // 
+            // numericUpDown_LL
+            // 
+            this.numericUpDown_LL.Location = new System.Drawing.Point(476, 767);
+            this.numericUpDown_LL.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.numericUpDown_LL.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numericUpDown_LL.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.numericUpDown_LL.Name = "numericUpDown_LL";
+            this.numericUpDown_LL.Size = new System.Drawing.Size(90, 25);
+            this.numericUpDown_LL.TabIndex = 35;
+            this.numericUpDown_LL.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(311, 769);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(157, 18);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "時定数計算範囲 ±";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1257, 866);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.numericUpDown_LL);
             this.Controls.Add(this.checkBox_short);
             this.Controls.Add(this.buttonR);
             this.Controls.Add(this.checkBoxR);
@@ -615,6 +652,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_LL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,5 +695,7 @@
         private System.Windows.Forms.CheckBox checkBoxR;
         private System.Windows.Forms.Button buttonR;
         private System.Windows.Forms.CheckBox checkBox_short;
+        private System.Windows.Forms.NumericUpDown numericUpDown_LL;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -313,12 +313,14 @@ namespace sf_calc
         #region OKボタン
         private void button1_Click(object sender, EventArgs e)
         {
-
-            double step = Math.Pow(10.0, 12.0 / 512.0);     //1e-6から1e+6まで512分割
+            double LL = (double)numericUpDown_LL.Value;
+            
+            double step = Math.Pow(10.0, LL / 256.0);     //-LLから+LLまで512分割
             double Vf;
 
             for(int i = 0; i < 512; i++)
             {
+
                 sTime[i] = Math.Pow(step, (double)(i - 256));
                 int j = triggernum;
                 while (this.dataArrayTime[j] < (sTime[i] * Math.Sqrt(step) + triggertime))

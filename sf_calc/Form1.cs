@@ -11,6 +11,18 @@ namespace sf_calc
 {
     public partial class Form1 : Form
     {
+        #region メンバクラス
+        public class Test
+        {
+            public string Name { get; set; }
+            public decimal Lamda { get; set; }
+            public decimal Cap { get; set; }
+            public decimal Roh { get; set; }
+        }
+
+        public class TestList : BindingList<Test> { }
+
+        #endregion
 
         #region メンバ変数
 
@@ -909,8 +921,6 @@ namespace sf_calc
         }
         #endregion
 
-       
-
         #region btnSav_Click
         /// <summary>
         /// 構造関数の保存ボタンが押された
@@ -1240,7 +1250,7 @@ namespace sf_calc
         /// </summary>
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string ss = this.listBox1.SelectedItem.ToString();
+            /* string ss = this.listBox1.SelectedItem.ToString();
             switch (ss)
             {
                 case "":
@@ -1274,6 +1284,18 @@ namespace sf_calc
                 default:
                     break;
             }
+            */
+
+            int rr=bindingSource1.Position;
+            TestList testlist = (TestList)bindingSource1.DataSource;
+            if (testlist != null)
+            {
+                c = (double)testlist[rr].Cap / 1000.0;
+                roh = (double)testlist[rr].Roh / 1000000.0;
+                lamda = (double)testlist[rr].Lamda / 1000.0;
+            }
+            
+            
         }
         #endregion
 
@@ -1403,6 +1425,7 @@ namespace sf_calc
         #region 起動時の処理
         private void Form1_Load(object sender, EventArgs e)
         {
+            ClientSize = new Size(1300, 820);
             this.Text += "   バージョン ";
             this.Text += Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
@@ -1411,6 +1434,23 @@ namespace sf_calc
             toolTip1.SetToolTip(this.labelCh3, "Ch3");
             toolTip1.SetToolTip(this.labelCh4, "Ch4");
             toolTip1.SetToolTip(this.labelCh5, "Ch5");
+
+            /* 初期物質データを設定
+             * Lamda: thermal conductivity [W/(m・K)]
+             * Cap: specific heat [J/(kg・K)]
+             * Roh: density [kg/m3]
+             */
+
+            TestList testlist = new TestList();
+            testlist.Add(new Test { Name = "Silicon", Lamda = 149, Cap = 704.6m, Roh = 2329 });
+            testlist.Add(new Test { Name = "Silicon Carbide", Lamda = 370, Cap = 714, Roh = 3210 });
+            testlist.Add(new Test { Name = "Germanium", Lamda = 60.2m, Cap = 320, Roh = 5323 });
+            testlist.Add(new Test { Name = "Gallium Arsenide", Lamda = 46, Cap = 350, Roh = 5316 });
+            testlist.Add(new Test { Name = "Gallium Nitride", Lamda = 130, Cap = 490, Roh = 6100 });
+
+            bindingSource1.DataSource = testlist;
+            listBox1.DataSource = bindingSource1;
+            listBox1.DisplayMember = "Name";
 
             listBox1.SelectedIndex = 1;
         }
@@ -1435,6 +1475,17 @@ namespace sf_calc
         }
         #endregion
 
+        #region チップの材質編集
+        private void label75_Click(object sender, EventArgs e)
+        {
+            Form4 frm = new Form4();
+            frm.ShowDialog(this);
+        }
         #endregion
+
+
+
+        #endregion
+
     }
 }

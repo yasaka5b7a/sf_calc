@@ -15,7 +15,7 @@ namespace System.Numerics
 
         #region ƒRƒ“ƒpƒCƒ‹’è”
 
-        private const int precision = 90;  //  Œ…”
+        public const int precision = 100;  //  Œ…”
 
         #endregion
 
@@ -24,7 +24,6 @@ namespace System.Numerics
         public static readonly Bigdecimal One = new Bigdecimal(BigInteger.One, 0);
         public static readonly Bigdecimal MinusOne = new Bigdecimal(BigInteger.MinusOne, 0);
         public static readonly Bigdecimal Zero = new Bigdecimal(BigInteger.Zero, 0);
-
         private readonly BigInteger _unscaledValue;
         private readonly int _scale;
 
@@ -97,6 +96,14 @@ namespace System.Numerics
 
             _unscaledValue = new BigInteger(number);
             _scale = BitConverter.ToInt32(flags, 0);
+        }
+
+        public Bigdecimal(string str)
+        {
+            int num = str.IndexOf(".");
+            string str2 = str.Replace(".", "");
+            _unscaledValue = BigInteger.Parse(str2);
+            _scale = str2.Length - num;
         }
 
         #endregion
@@ -388,6 +395,8 @@ namespace System.Numerics
         public static implicit operator Bigdecimal(decimal value) { return new Bigdecimal(value); }
 
         public static implicit operator Bigdecimal(BigInteger value) { return new Bigdecimal(value, 0); }
+
+        public static implicit operator Bigdecimal(string value) { return new Bigdecimal(value); }
 
         #endregion
 

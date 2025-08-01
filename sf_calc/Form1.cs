@@ -387,7 +387,8 @@ namespace sf_calc
 
             try
             {
-                this.cmd();
+                cmd();
+               
             }
             catch (Exception ex)
             {
@@ -1047,7 +1048,7 @@ namespace sf_calc
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());
+                    MessageBox.Show(ex.ToString());
                 }
                 //Console.WriteLine(n);
                 progressBar1.PerformStep();
@@ -1072,7 +1073,7 @@ namespace sf_calc
                 }
                 rn[i + 1] = ns[Nmax - i - 1] / ds[Nmax - i - 1];
 
-                ns[Nmax - i - 1] = 0;
+                ns[Nmax - i - 1] = Bigdecimal.Zero;
                 for (int j = 0; j < n; j++)
                 {
                     ns[j] -= ds[j] * rn[i + 1];
@@ -1145,6 +1146,8 @@ namespace sf_calc
             outf2.Close();
 
         }
+
+
 
         #endregion
 

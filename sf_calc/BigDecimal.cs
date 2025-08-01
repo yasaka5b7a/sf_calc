@@ -1,7 +1,7 @@
-
+ï»¿
 /*
- * QÆİ’è‚©‚çQÆ‚Ì’Ç‰Á‚Å.NET‚ÌuSystem.Numericsv‚ğ’Ç‰Á‚·‚éB
- * ƒƒCƒ“ƒtƒH[ƒ€‚Ìusing‚ÉuSystem.Numericsv‚ğ’Ç‰Á‚·‚éB
+ * å‚ç…§è¨­å®šã‹ã‚‰å‚ç…§ã®è¿½åŠ ã§.NETã®ã€ŒSystem.Numericsã€ã‚’è¿½åŠ ã™ã‚‹ã€‚
+ * ãƒ¡ã‚¤ãƒ³ãƒ•ã‚©ãƒ¼ãƒ ã®usingã«ã€ŒSystem.Numericsã€ã‚’è¿½åŠ ã™ã‚‹ã€‚
  */
 
 
@@ -13,23 +13,25 @@ namespace System.Numerics
     public struct Bigdecimal : IConvertible, IComparable<Bigdecimal>, IEquatable<Bigdecimal>
     {
 
-        #region ƒRƒ“ƒpƒCƒ‹’è”
+        #region ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«æ™‚å®šæ•°
 
-        public const int precision = 100;  //  Œ…”
+        public const int precision = 100;  //  æ¡æ•°
 
         #endregion
 
-        #region “Ç‚İæ‚èê—p
+        #region èª­ã¿å–ã‚Šå°‚ç”¨
 
         public static readonly Bigdecimal One = new Bigdecimal(BigInteger.One, 0);
         public static readonly Bigdecimal MinusOne = new Bigdecimal(BigInteger.MinusOne, 0);
         public static readonly Bigdecimal Zero = new Bigdecimal(BigInteger.Zero, 0);
+        public static readonly Bigdecimal PI = PIcalc();
+        public static readonly Bigdecimal E = Napier();
         private readonly BigInteger _unscaledValue;
         private readonly int _scale;
 
         #endregion
 
-        #region ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+        #region ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 
         public Bigdecimal(double value)
         {
@@ -108,7 +110,7 @@ namespace System.Numerics
 
         #endregion
 
-        #region ‰‰Zq
+        #region æ¼”ç®—å­
 
         public static bool operator ==(Bigdecimal left, Bigdecimal right)
         {
@@ -337,7 +339,7 @@ namespace System.Numerics
 
         #endregion
 
-        #region Œ^•ÏŠ·
+        #region å‹å¤‰æ›
 
         public static explicit operator byte(Bigdecimal value) { return value.ToType<byte>(); }
 
@@ -400,7 +402,7 @@ namespace System.Numerics
 
         #endregion
 
-        #region publicƒƒ\ƒbƒh
+        #region publicãƒ¡ã‚½ãƒƒãƒ‰
 
         public bool IsEven { get { return _unscaledValue.IsEven; } }
 
@@ -527,8 +529,10 @@ namespace System.Numerics
             return v*Bigdecimal.MinusOne;
         }
 
-        public static Bigdecimal Pow(Bigdecimal v, int n) {
-            Bigdecimal w = One;
+        public static Bigdecimal Pow(Bigdecimal v, int n) 
+        {
+            Bigdecimal w = One;     
+
             if (n == 0) return One;
             if (n > 0)
             {
@@ -549,11 +553,15 @@ namespace System.Numerics
             }
         }
 
+        
+
+
+
 
 
         #endregion
 
-        #region privateƒƒ\ƒbƒh
+        #region privateãƒ¡ã‚½ãƒƒãƒ‰
 
         private static byte[] FromDecimalToBytes(decimal d)
         {
@@ -586,9 +594,65 @@ namespace System.Numerics
 
         }
 
+
+        private static Bigdecimal PIcalc()
+        {
+            //  Gaussâ€“Legendre algorithm
+
+            Bigdecimal two = One + One;
+            Bigdecimal four = two + two;
+            Bigdecimal a = One;
+            Bigdecimal b = One / Sqrt(two);
+            Bigdecimal t = One / four;
+            Bigdecimal p = One;
+            Bigdecimal x = One;
+
+            while (a != b)
+            {
+                Bigdecimal an = (a + b) / two;
+                Bigdecimal bn = Sqrt(a * b);
+                Bigdecimal tn = t - p * (a - an) * (a - an);
+                Bigdecimal pn = p + p;
+
+                if (a == an)
+                {
+                    break;
+                }
+
+                a = an;
+                b = bn;
+                t = tn;
+                p = pn;
+
+                x = (a + b) * (a + b) / four / t;
+            }
+
+            return x;
+        }
+
+        private static Bigdecimal Napier()
+        {
+            var permutation = BigInteger.One;
+            var totalNumerator = BigInteger.Zero;
+
+
+            for (int i = precision + 1; i > 0; i--)
+            {
+                permutation *= i;
+                totalNumerator += permutation;
+            }
+
+            return ((Bigdecimal)totalNumerator + Bigdecimal.One) / (Bigdecimal)permutation;
+        }
+
+
+
+
+
+
         #endregion
 
-        #region IConvertible ƒƒ“ƒo[
+        #region IConvertible ãƒ¡ãƒ³ãƒãƒ¼
 
         object IConvertible.ToType(Type conversionType, IFormatProvider provider)
         {
@@ -764,7 +828,7 @@ namespace System.Numerics
 
         #endregion
 
-        #region IComparable<BigDecimal> ƒƒ“ƒo[
+        #region IComparable<BigDecimal> ãƒ¡ãƒ³ãƒãƒ¼
 
         public int CompareTo(Bigdecimal other)
         {
@@ -795,7 +859,7 @@ namespace System.Numerics
 
         #endregion
 
-        #region IEquatable<BigDecimal> ƒƒ“ƒo[
+        #region IEquatable<BigDecimal> ãƒ¡ãƒ³ãƒãƒ¼
 
         public bool Equals(Bigdecimal other)
         {

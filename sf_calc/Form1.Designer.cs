@@ -254,7 +254,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.CB_cmd = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartZth)).BeginInit();
@@ -2638,23 +2637,12 @@
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
             // 
-            // CB_cmd
-            // 
-            this.CB_cmd.AutoSize = true;
-            this.CB_cmd.Location = new System.Drawing.Point(2329, 1519);
-            this.CB_cmd.Name = "CB_cmd";
-            this.CB_cmd.Size = new System.Drawing.Size(152, 28);
-            this.CB_cmd.TabIndex = 14;
-            this.CB_cmd.Text = "BigRational";
-            this.CB_cmd.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(2564, 1559);
-            this.Controls.Add(this.CB_cmd);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label75);
             this.Controls.Add(this.checkBox5);
@@ -2938,7 +2926,6 @@
         private System.Windows.Forms.TextBox tB_curCth;
         private System.Windows.Forms.ToolTip toolTip1;
         public System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.CheckBox CB_cmd;
     }
 }
 

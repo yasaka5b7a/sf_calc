@@ -681,13 +681,21 @@ namespace System.Numerics
                     rightOfDecimal = ((decimal)remainder) / ((decimal)scaleDivisor);
 
                 }
-                else if (scaleDivisor < new BigInteger(double.MaxValue))
+                else 
                 {
+                    while(scaleDivisor > new BigInteger(decimal.MaxValue))
+                    {
+                        scaleDivisor /= 10;
+                        remainder /= 10;
+                    }
+
                     double r1 = (double)remainder;
                     double r2 = (double)scaleDivisor;
                     double r3 = (double)leftOfDecimal;
                     return Convert.ChangeType(r3 + r1 / r2, conversionType);
+
                 }
+                        
 
                 var value = leftOfDecimal + rightOfDecimal;
 

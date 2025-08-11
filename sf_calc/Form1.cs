@@ -1021,9 +1021,6 @@ namespace sf_calc
                     Bigdecimal RC = RR * CC;
                     Bigdecimal n0 = Bigdecimal.Zero;
 
-                    //r = Math.Abs(r);
-                    //cd = Math.Abs(cd);
-
                     if (n == 0)
                     {
                         ns[0] = RR;
@@ -1044,6 +1041,12 @@ namespace sf_calc
                         ns[0] = n0;
 
                     }
+
+                    if (((double)ns[n]) == 0.0 || ((double)ds[n]) == 0.0)
+                    {
+                        ;
+                    }
+                    
 
                 }
                 catch (Exception ex)
@@ -1100,6 +1103,10 @@ namespace sf_calc
 
             for (int i = 0; i < Nmax; i++)
             {
+                if (((double)rn[i]) == 0.0 || ((double)cn[i]) == 0.0)
+                {
+                    ;
+                }
                 c1 += cn[i];
                 r1 += rn[i];
                 rx = (double)rn[i];

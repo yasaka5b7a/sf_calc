@@ -1200,9 +1200,9 @@
             this.label100.Location = new System.Drawing.Point(1957, 748);
             this.label100.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(120, 24);
+            this.label100.Size = new System.Drawing.Size(156, 24);
             this.label100.TabIndex = 77;
-            this.label100.Text = "Cursor Cth";
+            this.label100.Text = "TP Cursor Cth";
             // 
             // numericUpDownCurY
             // 
@@ -1360,7 +1360,7 @@
             // 
             // numericUpDown_xmin
             // 
-            this.numericUpDown_xmin.DecimalPlaces = 1;
+            this.numericUpDown_xmin.DecimalPlaces = 2;
             this.numericUpDown_xmin.Increment = new decimal(new int[] {
             1,
             0,
@@ -1380,7 +1380,7 @@
             // 
             // numericUpDown_xmax
             // 
-            this.numericUpDown_xmax.DecimalPlaces = 1;
+            this.numericUpDown_xmax.DecimalPlaces = 2;
             this.numericUpDown_xmax.Increment = new decimal(new int[] {
             1,
             0,
@@ -2714,7 +2714,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
-            this.Text = "SF_calc　過渡熱解析　～神奈川県立産業技術総合研究所～ 2025.08.02 更新";
+            this.Text = "SF_calc　過渡熱解析　～神奈川県立産業技術総合研究所～ 2025.08.13 更新";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);

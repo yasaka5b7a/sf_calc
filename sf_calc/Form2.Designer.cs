@@ -313,7 +313,7 @@
             0,
             0});
             this.numericUpDown4.Minimum = new decimal(new int[] {
-            10,
+            1,
             0,
             0,
             0});
@@ -514,12 +514,12 @@
             this.numericUpDown6.Location = new System.Drawing.Point(1447, 708);
             this.numericUpDown6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.numericUpDown6.Maximum = new decimal(new int[] {
-            500,
+            1000,
             0,
             0,
             0});
             this.numericUpDown6.Minimum = new decimal(new int[] {
-            10,
+            3,
             0,
             0,
             0});
@@ -549,7 +549,7 @@
             // buttonR
             // 
             this.buttonR.Location = new System.Drawing.Point(1122, 19);
-            this.buttonR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonR.Margin = new System.Windows.Forms.Padding(4);
             this.buttonR.Name = "buttonR";
             this.buttonR.Size = new System.Drawing.Size(195, 40);
             this.buttonR.TabIndex = 33;
@@ -561,7 +561,7 @@
             // 
             this.checkBox_short.AutoSize = true;
             this.checkBox_short.Location = new System.Drawing.Point(796, 1029);
-            this.checkBox_short.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_short.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_short.Name = "checkBox_short";
             this.checkBox_short.Size = new System.Drawing.Size(179, 28);
             this.checkBox_short.TabIndex = 34;

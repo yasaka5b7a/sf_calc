@@ -1140,8 +1140,8 @@ namespace sf_calc
                         if (r1 > Rthcx[nowChannel] && flag)
                         {
                             flag = false;
-                            outf2.WriteLine("WIRE {0} 0 {1} -300", k * 144 + 32, k * 144 + 32);
-                            outf2.WriteLine("FLAG {0} -300 TP", k * 144 + 32);
+                            outf2.WriteLine("WIRE {0} 0 {1} -320", k * 208 + 96, k * 208 + 96);
+                            outf2.WriteLine("FLAG {0} -320 TP", k * 208 + 96);
                             outf2.WriteLine("");
                         }
                         k++;

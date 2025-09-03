@@ -703,7 +703,7 @@ namespace sf_calc
             }
             */
 
-            ListName[nowChannel] = listBox1.SelectedItem.ToString();
+            ListName[nowChannel] = listBox1.Text;
 
             area[nowChannel] = frm.ActiveArea;
             Tjmax[nowChannel] = frm.Tjmax;
@@ -766,7 +766,7 @@ namespace sf_calc
                 using (StreamWriter myStream = new StreamWriter(saveFileDialog1.OpenFile(), System.Text.Encoding.GetEncoding("Shift_JIS")))
                 {
                     myStream.WriteLine("sf_calc Version {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString());
-                    myStream.WriteLine("Tjmax [℃],{0}", Tjmax[nowChannel]);
+                    myStream.WriteLine("Tjmax [℃],{0:f4}", Tjmax[nowChannel]);
                     myStream.WriteLine("Power step [W],{0}", Powerstep[nowChannel]);
                     myStream.WriteLine("Heatsink Temp [℃],{0}", HeatsinkTemp[nowChannel]);
                     myStream.WriteLine("発熱面積 [mm2],{0}", area[nowChannel]);

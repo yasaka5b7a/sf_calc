@@ -6,6 +6,8 @@
 
 
 
+using System.Runtime.ExceptionServices;
+
 namespace System.Numerics
 
 {
@@ -15,7 +17,7 @@ namespace System.Numerics
 
         #region コンパイル時定数
 
-        public const int precision = 100;  //  桁数
+        public const int precision = 210;  //  桁数
 
         #endregion
 
@@ -24,6 +26,8 @@ namespace System.Numerics
         public static readonly Bigdecimal One = new Bigdecimal(BigInteger.One, 0);
         public static readonly Bigdecimal MinusOne = new Bigdecimal(BigInteger.MinusOne, 0);
         public static readonly Bigdecimal Zero = new Bigdecimal(BigInteger.Zero, 0);
+        public static readonly Bigdecimal MaxValue = Maxcalc();
+        public static readonly Bigdecimal MinValue = Mincalc();
         public static readonly Bigdecimal PI = PIcalc();
         public static readonly Bigdecimal E = Napier();
         private readonly BigInteger _unscaledValue;
@@ -305,6 +309,7 @@ namespace System.Numerics
             Bigdecimal ret;
             int upscale;
             BigInteger op1;
+            ExceptionDispatchInfo edi = null;
 
             if (right._scale > left._scale)
             {
@@ -318,7 +323,7 @@ namespace System.Numerics
                 }
                 catch (Exception e)
                 {
-                    throw e;
+                    edi = ExceptionDispatchInfo.Capture(e);
                 }
             }
             else
@@ -332,9 +337,12 @@ namespace System.Numerics
                 }
                 catch (Exception e)
                 {
-                    throw e;
+                    edi = ExceptionDispatchInfo.Capture(e);
                 }
             }
+
+            if (edi != null)    edi.Throw();
+            return Bigdecimal.Zero;
         }
 
         #endregion
@@ -469,6 +477,16 @@ namespace System.Numerics
 
             if (v == Zero) return v;
 
+            if (v > MaxValue)
+            {
+                throw new OverflowException("Value was too large for a Bigdecimal");
+            }
+
+            if (v < MinValue)
+            {
+                throw new OverflowException("Value was too small for a Bigdecimal");
+            }
+
             int m = (int)BigInteger.Log10(BigInteger.Abs(v._unscaledValue)) - precision;
 
             if (m > 0)
@@ -521,7 +539,7 @@ namespace System.Numerics
                     d /= 10.0;
                 }
             }
-            return ret;
+            return Rounding(ret);
         }
 
         public static Bigdecimal Abs(Bigdecimal v) {
@@ -641,13 +659,21 @@ namespace System.Numerics
                 permutation *= i;
                 totalNumerator += permutation;
             }
-
-            return ((Bigdecimal)totalNumerator + Bigdecimal.One) / (Bigdecimal)permutation;
+            totalNumerator++;
+            return (Bigdecimal)totalNumerator / (Bigdecimal)permutation;
         }
 
+        private static Bigdecimal Maxcalc()
+        {
+            BigInteger mantissa = BigInteger.Pow(10, precision) - 1;
+            return new Bigdecimal(mantissa, 0);
+        }
 
-
-
+        private static Bigdecimal Mincalc()
+        {
+            BigInteger mantissa = BigInteger.Pow(10, precision) - 1;
+            return new Bigdecimal(-mantissa, 0);
+        }
 
 
         #endregion
@@ -808,8 +834,9 @@ namespace System.Numerics
 
         string IConvertible.ToString(IFormatProvider provider)
         {
-
-            return Convert.ToString(this);
+            string s = Convert.ToString(this);
+            if(s == null)   s = string.Empty;
+            return s;
 
         }
 

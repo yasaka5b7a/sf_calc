@@ -15,9 +15,9 @@ namespace System.Numerics
     public struct Bigdecimal : IConvertible, IComparable<Bigdecimal>, IEquatable<Bigdecimal>
     {
 
-        #region コンパイル時定数
+        #region コンパイル時の定数
 
-        public const int precision = 210;  //  桁数
+        public const int precision = 100;  //  桁数
 
         #endregion
 
@@ -479,12 +479,12 @@ namespace System.Numerics
 
             if (v > MaxValue)
             {
-                throw new OverflowException("Value was too large for a Bigdecimal");
+                //throw new OverflowException("Value was too large for a Bigdecimal");
             }
 
             if (v < MinValue)
             {
-                throw new OverflowException("Value was too small for a Bigdecimal");
+                //throw new OverflowException("Value was too small for a Bigdecimal");
             }
 
             int m = (int)BigInteger.Log10(BigInteger.Abs(v._unscaledValue)) - precision;
